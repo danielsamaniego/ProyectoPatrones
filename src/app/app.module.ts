@@ -15,13 +15,14 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
 
 import { PaqueteService } from '../app/services/paquete.service';
+import { ConfiguracionFirebase } from './services/ConfiguracionFirebase';
 
 @NgModule({
   imports: [
     AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(ConfiguracionFirebase.getConfiguracionFirebae().firebaseConfig),
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,

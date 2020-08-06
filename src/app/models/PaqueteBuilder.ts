@@ -10,7 +10,6 @@ import { CotizacionEnvioAbstracta } from '../cotizador/cotizador_envios/Cotizaci
 
 export class PaqueteBuilder{
 
-    private numero_rastreo:string;
     private remitente:Persona;
     private destinatario:Persona;
     private direccion_remitente:Direccion;
@@ -20,10 +19,7 @@ export class PaqueteBuilder{
     private peso:number;
     private valor:number;
     private descripcion:string;
-
-    public  setNumeroRastreo(_numero_rastreo:string){
-        this.numero_rastreo = _numero_rastreo;
-    }
+    
     public  setDescripcion(_descripcion:string):void{
         this.descripcion = _descripcion;
     }
@@ -66,7 +62,7 @@ export class PaqueteBuilder{
         this.remitente.telefono = this.telefono_remitente
         this.destinatario.telefono = this.telefono_destinatario
 
-        let paquete = new Paquete(this.valor,this.numero_rastreo,this.descripcion,this.peso,this.remitente,this.destinatario)
+        let paquete = new Paquete(this.valor,this.descripcion,this.peso,this.remitente,this.destinatario)
 
         //calculo de cotización
         let cotizacion:CotizacionEnvioAbstracta

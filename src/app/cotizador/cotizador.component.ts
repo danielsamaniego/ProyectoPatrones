@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PaqueteBuilder } from '../models/PaqueteBuilder';
 import { Paquete } from '../models/paquete';
+import { PaquetefachadaService } from '../services/paquetefachada.service';
 
 @Component({
   selector: 'app-cotizador',
@@ -42,7 +43,7 @@ export class CotizadorComponent implements OnInit {
   paquete:Paquete 
 
 
-  constructor() {
+  constructor(private paqueteService:PaquetefachadaService) {
     this.paqueteBuilder = new PaqueteBuilder()
    }
 
@@ -68,9 +69,8 @@ export class CotizadorComponent implements OnInit {
     // VALIDAR CAMPOS VACIOS
     this.paqueteBuilder.setDescripcion(this.descripcion);
     this.paqueteBuilder.setDestinatario(this.nombre_destinatario,this.cedula_destinatario,this.correo_destinatario)
-    this.paqueteBuilder.setDireccionDestino(this.pais_destino,this.calle_destino,this.calle_destino)
+    this.paqueteBuilder.setDireccionDestino(this.pais_destino,this.ciudad_destino,this.calle_destino)
     this.paqueteBuilder.setDireccionOrigen(this.pais_origen,this.ciudad_origen,this.calle_origen)
-    this.paqueteBuilder.setNumeroRastreo(this.numero_rastreo)
     this.paqueteBuilder.setPeso(this.peso)
     this.paqueteBuilder.setRemitente(this.nombre_remitente,this.cedula_remitente,this.correo_remitente)
     this.paqueteBuilder.setTelefonoDestinatario(this.telefono_destinatario,this.operadora_destinatario)
@@ -80,10 +80,12 @@ export class CotizadorComponent implements OnInit {
     console.log(this.paquete)
     console.log('dadasdas')
     this.cotizado = true
+    console.log()
     
   }
 
   confirmar(){
+    this.paqueteService.registrarPaquetes(this.paquete);
     //GUARDAR PAQUETE
   }
 
