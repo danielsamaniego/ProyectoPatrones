@@ -1,0 +1,82 @@
+<div class="panel-header panel-header-lg" >
+  <img src="../../assets/img/genei.png" style="display: block; margin: auto;">
+</div>
+
+<div class="main-content">
+  <div class="row">
+    
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-category">Envíos Registrados</h5>
+          <h4 class="card-title"> Lista De Envíos</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Descripción
+                </th>
+                <th>
+                  Peso (Libras)
+                </th>
+                <th>
+                  Valor (Dólares)
+                </th>
+                <th>
+                  Remitente
+                </th>
+                <th>
+                  Destinatario
+                </th>
+                <th>
+                  Destino
+                </th>
+                <th>
+                  Origen
+                </th>
+                <th class="text-right">
+                  Costo Total Envío
+                </th>
+              </thead>
+              <tbody *ngFor="let paquete of envios">
+                <tr>
+                  <td>
+                    {{paquete.descripcion}}
+                  </td>
+                  <td>
+                    {{paquete.peso}}
+                  </td>
+                  <td>
+                    ${{paquete.valor}}
+                  </td>
+                  <td>
+                    {{paquete.remitente.nombre}}
+                  </td>
+                  <td>
+                    {{paquete.destinatario.nombre}}
+                  </td>
+                  <td>
+                    {{paquete.destinatario.direccion.pais}} -  {{paquete.destinatario.direccion.ciudad}} -  {{paquete.destinatario.direccion.calles}}
+                  </td>
+                  <td>
+                    {{paquete.remitente.direccion.pais}} -  {{paquete.remitente.direccion.ciudad}} -  {{paquete.remitente.direccion.calles}}
+                  </td>
+                  <td class="text-right" *ngIf='paquete.costos_envio.iva'>
+                    ${{paquete.costos_envio.envio + paquete.costos_envio.iva + paquete.costos_envio.advalorem + paquete.costos_envio.fodinfa}}
+                  </td>
+                  <td class="text-right" *ngIf='!paquete.costos_envio.iva'>
+                    ${{paquete.costos_envio.envio }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

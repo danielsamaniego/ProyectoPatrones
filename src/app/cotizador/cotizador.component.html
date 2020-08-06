@@ -1,0 +1,176 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Cotizar Envío</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-3 pr-1">
+                <div class="form-group">
+                  <label> Nombre Remitente</label>
+                  <input [(ngModel)]="nombre_remitente" type="text" class="form-control"  placeholder="Nombre" value="" name="nombre_remitente">
+                </div>
+              </div>
+              <div class="col-md-2 px-1">
+                <div class="form-group">
+                  <label>Cédula Del Remitente</label>
+                  <input [(ngModel)]="cedula_remitente" type="text" class="form-control" placeholder="CI" value="" name="cedula_remitente">
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label >Email Remitente</label>
+                  <input  [(ngModel)]="correo_remitente" type="email" class="form-control" placeholder="Email" name="correo_remitente">
+                </div>
+              </div>
+              <div class="col-md-2 pl-1">
+                <div class="form-group">
+                  <label >Telefono Remitente</label>
+                  <input  [(ngModel)]="telefono_remitente" type="text" class="form-control" placeholder="Teléfono" name="telefono_remitente">
+                </div>
+              </div>
+              <div class="col-md-2 pl-1">
+                <div class="form-group">
+                  <label >Operadora</label>
+                  <input [(ngModel)]="operadora_remitente"  type="text" class="form-control" placeholder="Operadora" name="operadora_remitente">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 pr-1">
+                <div class="form-group">
+                  <label> Nombre Del Destinatario</label>
+                  <input [(ngModel)]="nombre_destinatario" type="text" class="form-control"  placeholder="Nombre" value="" name="nombre_destinatario">
+                </div>
+              </div>
+              <div class="col-md-2 px-1">
+                <div class="form-group">
+                  <label>Cédula Destinatario</label>
+                  <input [(ngModel)]="cedula_destinatario" type="text" class="form-control" placeholder="CI" value="" name="cedula_destinatario">
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label >Email Destinatario</label>
+                  <input [(ngModel)]="correo_destinatario"  type="email" class="form-control" placeholder="Email" name="correo_destinatario">
+                </div>
+              </div>
+              <div class="col-md-2 pl-1">
+                <div class="form-group">
+                  <label >Telefono Destinatario</label>
+                  <input [(ngModel)]="telefono_destinatario"  type="text" class="form-control" placeholder="Teléfono" name="telefono_destinatario">
+                </div>
+              </div>
+              <div class="col-md-2 pl-1">
+                <div class="form-group">
+                  <label >Operadora</label>
+                  <input [(ngModel)]="operadora_destinatario"  type="text" class="form-control" placeholder="Operadora" name="operadora_destinatario">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label> País Origen</label>
+                  <input [(ngModel)]="pais_origen" type="text" class="form-control"  placeholder="País" value="Ecuador" name="pais_origen">
+                </div>
+              </div>
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label>Ciudad Origen</label>
+                  <input [(ngModel)]="ciudad_origen" type="text" class="form-control" placeholder="Ciudad" value="" name="ciudad_origen">
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label >Calles Origen</label>
+                  <input  [(ngModel)]="calle_origen" type="text" class="form-control" placeholder="Calles" name="calle_origen">
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label> País Destino</label>
+                  <input [(ngModel)]="pais_destino" type="text" class="form-control"  placeholder="País" value="Ecuador" name="pais_destino">
+                </div>
+              </div>
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label>Ciudad Destino</label>
+                  <input [(ngModel)]="ciudad_destino" type="text" class="form-control" placeholder="Ciudad" value="" name="ciudad_destino">
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label >Calles Destino</label>
+                  <input [(ngModel)]="calle_destino"  type="text" class="form-control" placeholder="Calles" name="calle_destino">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label> Descripción Del Paquete</label>
+                  <input [(ngModel)]="descripcion" type="text" class="form-control"  placeholder="Descripción" value="" name="descripcion">
+                </div> 
+              </div>
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label>Peso</label>
+                  <input [(ngModel)]="peso" type="number" class="form-control" placeholder="Peso en libras" value="" name="peso">
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label >Valor</label>
+                  <input [(ngModel)]="valor"  type="text" class="form-control" placeholder="Valor en dólares" name="valor">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label >Información Cotización (Envíos Internacionales Pagan Impuestos De Desaduanización)</label>
+                  
+                  <label class="row" *ngIf="cotizado">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Envío: {{paquete.costos_envio.envio}}</label>
+                  <label class="row" *ngIf="cotizado">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fodinfa: {{paquete.costos_envio.fodinfa}}</label>
+                  <label class="row" *ngIf="cotizado">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AdValorem: {{paquete.costos_envio.advalorem}}</label>
+                  <label class="row" *ngIf="cotizado">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IVA: {{paquete.costos_envio.iva}}</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-2">
+                <div class="btn btn-success" (click)="cotizar()">
+                  Cotizar
+                </div>
+              </div>
+              <div class="col-md-2" *ngIf="cotizado">
+                <div class="btn btn-success" (click)="confirmar()">
+                  Confirmar Envío
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
