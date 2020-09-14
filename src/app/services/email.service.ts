@@ -22,7 +22,18 @@ export class EmailService {
   //POST
   public enviarNotificacion(paquete:Paquete){
     //enviar mensaaje al destinatario
-    //this.http.post<any>("https://localhost/emailsender/enviar", JSON.stringify(paquete.destinatario), this.httpOptions);
+    console.log("Notificacione Enviada")
+    this.http.post<any>("http://localhost:3001/send-email", {
+      "email": paquete.destinatario.correo
+    }).subscribe(
+      (data) => { // Success
+        console.log("Envio Exitoso")
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  
   }
 
  

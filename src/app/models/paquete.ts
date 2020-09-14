@@ -9,6 +9,8 @@ export class Paquete {
         this.peso = peso;
         this.valor  = valor
     }
+    $key:string
+    fecha:Date
     descripcion:string
     remitente:Persona
     destinatario:Persona

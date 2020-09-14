@@ -16,12 +16,14 @@ export class PaqueteService {
     return this.listaPaquetes = this.firebase.list('paquetes')
   }
   postPaquetes(paquete: Paquete){
+    console.log(paquete)
     this.listaPaquetes = this.firebase.list('paquetes')
 
     if(paquete.destinatario.direccion.pais != paquete.remitente.direccion.pais){//si es internacional
 
       this.listaPaquetes.push({
         descripcion:paquete.descripcion,
+        fecha:paquete.fecha.toString(),
         remitente:{
           cedula:paquete.remitente.cedula,
           nombre:paquete.remitente.nombre,
@@ -65,6 +67,7 @@ export class PaqueteService {
     else{
       this.listaPaquetes.push({
         descripcion:paquete.descripcion,
+        fecha:paquete.fecha.toString(),
         remitente:{
           cedula:paquete.remitente.cedula,
           nombre:paquete.remitente.nombre,

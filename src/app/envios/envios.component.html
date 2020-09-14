@@ -71,6 +71,9 @@
                   <td class="text-right" *ngIf='!paquete.costos_envio.iva'>
                     ${{paquete.costos_envio.envio }}
                   </td>
+                  <td class="text-right">
+                    <button class="btn btn-success" (click)="generarFactura(paquete)">Imprimir Factura</button>
+                  </td>
                 </tr>
               </tbody>
             </table>

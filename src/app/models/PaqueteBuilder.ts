@@ -19,9 +19,14 @@ export class PaqueteBuilder{
     private peso:number;
     private valor:number;
     private descripcion:string;
+    private fecha:Date;
     
     public  setDescripcion(_descripcion:string):void{
         this.descripcion = _descripcion;
+    }
+
+    public  setFecha(_fecha:Date):void{
+        this.fecha = _fecha;
     }
 
     public  setRemitente(_nombre:string,_cedula:string,_correo:string):void{
@@ -64,6 +69,8 @@ export class PaqueteBuilder{
 
         let paquete = new Paquete(this.valor,this.descripcion,this.peso,this.remitente,this.destinatario)
 
+        paquete.fecha = this.fecha;
+        
         //calculo de cotización
         let cotizacion:CotizacionEnvioAbstracta
 
