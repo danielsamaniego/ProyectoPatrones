@@ -6,6 +6,7 @@ import { AngularFireList } from 'angularfire2/database';
 import { PaquetefachadaService } from '../services/paquetefachada.service';
 import { FacturaBuilder } from '../models/FacturaBuilder';
 import { Factura } from '../models/factura';
+import { FacturafachadaService } from '../services/facturafachada.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './envios.component.html',
@@ -17,7 +18,7 @@ export class EnviosComponent implements OnInit {
 
   public envios:Array<any>;
   
-  constructor(private paqueteFachadaService:PaquetefachadaService) {
+  constructor(private paqueteFachadaService:PaquetefachadaService, private facturaFachadaService:FacturafachadaService) {
 
     this.paqueteFachadaService.obtenerPaquetes().snapshotChanges().subscribe(item => {
       this.envios = [];
@@ -52,7 +53,7 @@ export class EnviosComponent implements OnInit {
     
     let factura:Factura =  this.facturaBuilder.construirPaquete();
 
-    console.log(factura);
+    this.facturaFachadaService.generarFactura(paquete.remitente.correo,factura);
 
   }
 

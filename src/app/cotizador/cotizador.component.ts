@@ -85,7 +85,7 @@ export class CotizadorComponent implements OnInit {
     this.paqueteBuilder.setPeso(this.peso)
     this.paqueteBuilder.setRemitente(this.nombre_remitente,this.cedula_remitente,this.correo_remitente)
     this.paqueteBuilder.setTelefonoDestinatario(this.telefono_destinatario,this.operadora_destinatario)
-    this.paqueteBuilder.setTelefonoRemitente(this.operadora_remitente,this.operadora_remitente)
+    this.paqueteBuilder.setTelefonoRemitente(this.telefono_remitente,this.operadora_remitente)
     this.paqueteBuilder.setValor(this.valor)
     this.paquete = this.paqueteBuilder.construirPaquete();
     this.cotizado = true

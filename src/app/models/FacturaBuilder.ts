@@ -66,7 +66,7 @@ export class FacturaBuilder{
 
     public  construirPaquete():Factura{
         this.paqueteFactura = new PaqueteFactura(this.descripcion,this.valor);
-        let factura:Factura = new Factura(this.numero,this.fecha,this.cliente,this.celular,this.direccion,this.paqueteFactura,this.detallesFactura);
+        let factura:Factura = new Factura(this.numero,this.fecha,this.cliente,this.cedula,this.celular,this.direccion,this.paqueteFactura,this.detallesFactura);
         return factura;
     }
 
