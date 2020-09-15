@@ -35,10 +35,11 @@ export class ContenidoEnviosComponent implements OnInit {
   }
 
   calcularReportes():void{
-    let comandoPaisOrigen = new ContenidoComunCommand(this.envios);
+    let contenidoComunCommand = new ContenidoComunCommand(this.envios);
 
     let generadorReportes = new GeneradorReportes();
-    generadorReportes.establecerComando(comandoPaisOrigen);
+    
+    generadorReportes.establecerComando(contenidoComunCommand);
     let datos = generadorReportes.ejecutar();
     console.log(datos)
     var myChart = new Chart("canvas", {  

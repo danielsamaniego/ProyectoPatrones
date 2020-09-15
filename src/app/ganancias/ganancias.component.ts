@@ -41,6 +41,7 @@ export class GananciasComponent implements OnInit {
 
     let generadorReportes = new GeneradorReportes();
     generadorReportes.establecerComando(comandoGananciasEnvio);
+    
     this.ganancias = generadorReportes.ejecutar();
     
 
