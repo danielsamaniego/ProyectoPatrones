@@ -35,7 +35,7 @@ export class PrinterService {
       console.log("imprimiendo..");
       console.log(imprimir);
 
-      var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+      var mywindow = window.open('', 'PRINT');
       mywindow.document.write('<html><head><title>' + 'Factura'  + '</title>');
       mywindow.document.write(imprimir);
 

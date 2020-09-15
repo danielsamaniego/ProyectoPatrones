@@ -18,6 +18,10 @@ import { AngularFireModule } from 'angularfire2';
 
 import { PaqueteService } from '../app/services/paquete.service';
 import { ConfiguracionFirebase } from './services/ConfiguracionFirebase';
+import { PaisesOrigenComponent } from './paises-origen/paises-origen.component';
+import { PaisesDestinoComponent } from './paises-destino/paises-destino.component';
+import { GananciasComponent } from './ganancias/ganancias.component';
+import { ContenidoEnviosComponent } from './contenido-envios/contenido-envios.component';
 
 @NgModule({
   imports: [
@@ -34,7 +38,11 @@ import { ConfiguracionFirebase } from './services/ConfiguracionFirebase';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    PaisesOrigenComponent,
+    PaisesDestinoComponent,
+    GananciasComponent,
+    ContenidoEnviosComponent
 
   ],
   providers: [
